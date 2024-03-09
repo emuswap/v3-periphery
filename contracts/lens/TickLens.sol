@@ -15,6 +15,7 @@ contract TickLens is ITickLens {
         override
         returns (PopulatedTick[] memory populatedTicks)
     {
+        uint8 CHAIN_ID = 61;
         // fetch bitmap
         uint256 bitmap = IUniswapV3Pool(pool).tickBitmap(tickBitmapIndex);
 
